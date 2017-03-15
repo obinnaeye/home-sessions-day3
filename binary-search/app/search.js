@@ -6,7 +6,7 @@ Array.prototype.toTwenty = function(){
         arr20.push(i);
     }
     return arr20;
-}
+};
 
 Array.prototype.toOneThousand = function(){
     var arr1000 = [];
@@ -14,7 +14,7 @@ Array.prototype.toOneThousand = function(){
         arr1000.push(i);
     }
     return arr1000;
-}
+};
 
 Array.prototype.toForty = function(){
     var arr40 = [];
@@ -22,57 +22,40 @@ Array.prototype.toForty = function(){
         arr40.push(i);
     }
     return arr40;
-}
+};
 
-Array.prototype.search = function (searchElement) {
-    const self = this;
-    //console.log(self);
-    const first = self[0];
-    const last = self[self.length - 1];
-    self.count = 0;
-    self.index = -1;
-
-    //console.log(self);
-	var start = 0;
-    var end = self.length - 1;
-    var currentIndex;
-    var currentElement;
-    if (searchElement > last || searchElement < first){
-        return new holder (self.count,self.length,self.index);
-    }else{
-        while (start <= end) {
-            currentIndex = Math.floor((start + end) / 2);
-            currentElement = self[currentIndex];
-            if (self[start]  === searchElement) {
-                 self.index = start;
-                  break;
-             }
-             else if (self[end]  === searchElement){
-                 self.index = end;
-                  break;
-             }else if (currentElement < searchElement) {
-                start = currentIndex + 1;
+Array.prototype.search = function search(n) {
+    	var length  = this.length,
+        	high    = length,
+        	low     = 1,
+        	mid     = low + Math.floor((high - low)/2),
+        	count   = 0;
+        
+        while (this[mid - 1] !== n) {
+            if (n > this[mid - 1]){
+               	low  = mid + 1;
+               	count++;
+            } else {
+               	high = mid -1;
             }
-            else if (currentElement > searchElement) {
-                end = currentIndex - 1;
-            }
-            else {
-                self.index = currentIndex;
-                break;
-            }
-    	    self.count++;
-        }   
-    }
-    
+            mid  = low + Math.ceil((high - low)/2);
 
-
-   return new holder (self.count,self.length,self.index);
-  
+            //return index = -1, if number is not found
+            if (low === mid && this[mid - 1] !== n){
+                return new holder (count, length, -1);
+            } 
+        }
+        //number is the last element
+        if (n === this[length - 1]) return {
+        	length: length, index: (high - 1), count: 0
+        };
+        
+        return new holder (count, length, (mid - 1));
 };
 
 
+//function to return Array prototype properties
 function holder(count,length,index){
-  
     this.count = count;
     this.length = length;
     this.index = index;
