@@ -10,5 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nnenanya O.K",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jasmine": "^2.5.3"
+  }
 }
