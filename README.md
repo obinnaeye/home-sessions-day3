@@ -12,4 +12,21 @@ It can be used to generate an array of numbers:
 
 ### To use this app
     1.  npm install
-    2.  npm search
+    2.  npm test
+    
+## Find Missing Number
+This app takes two arrays as parameters and then returns the number is one array that is not in the other.
+
+### To use this app
+    1.  npm install
+    2.  npm test
+    
+## About.me Clone
+This app is just a clone of the site https://about.me/nnenanya
+
+It is the profile page of about.me, a site for organizing and sharing your portfolio.
+
+### To use this app
+    1.  clone the repo
+    2.  run the index.html
+    
