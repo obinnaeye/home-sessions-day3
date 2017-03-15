@@ -1,0 +1,14 @@
+{
+  "name": "binary-search",
+  "version": "1.0.0",
+  "description": "A binary app",
+  "main": "app/search.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nnenanya O.K",
+  "license": "ISC"
+}
