@@ -17,6 +17,8 @@ ul {
 
 li {
     float: right;
+    font-size: 17px;
+    font-family:'Montserrat', sans-serif;
 }
 
 li a {
@@ -59,9 +61,9 @@ li a {
 
 /**********PROFILE************/
 .profile-pix{
-  width: 130px;
-  height: 130px;
-  margin: 80px auto 0px;
+  width: 140px;
+  height: 140px;
+  margin: 60px auto 0px;
   border-radius: 50%;
   z-index: 1;
   position: relative;
@@ -78,19 +80,55 @@ li a {
   position: relative;
   border-radius: 5px;
   padding: 100px 20px 20px;
+  text-align: center;
 }
 .profile-name{
-  color: black;
   width: 400px;
   height : 10px;
   margin: 0 auto;
-  text-align: center
+  text-align: center;
+  font-family:'Montserrat', sans-serif;
 }
 .profile-name:first-child{
     font-size: 20px;
-    margin-bottom: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
 }
 .profile-name:last-child{
-    font-size: 15px;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
     color: red;
+}
+.fa:not(.fa-briefcase){
+    font-size: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.fa-facebook-square{
+    margin: 30px 40px;
+}
+.fa:not(.fa-briefcase):hover{
+    color: #2f3042;
+}
+.interest{
+    cursor: pointer;
+}
+p span{
+    color: grey;
+}
+.portfolio-link{
+    background: #326d28;
+    padding-top: 13px;
+    width: 200px;
+    font-size: 18px;
+    margin: 20px auto;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 30px;
+    color: white;
 }
