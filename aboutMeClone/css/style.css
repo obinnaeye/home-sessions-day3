@@ -1,15 +1,11 @@
 *{
     transition: background-color .15s ease-out,color .15s ease-out,border-color .15s ease-out,fill .15s ease-out,box-shadow .15s ease-out;
 }
+
 body{
     background-color: #34731A;
     background-image: linear-gradient(135deg, #34731A 0%, #34731A 30%, #58c42c 100%);
-}
-
-.page-container.page-container {
-    width: 100%;
-    height: 100%;
-    overflow: visible;
+    overflow-y: hidden;
 }
 
 ul {
@@ -31,40 +27,19 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
-    background-color: #111;
-}
 .logo{
     float: left;
+    cursor: pointer;
 }
 
-.active {
-    background-color: #4CAF50;
-}
-nav.topnav .button {
-    border-color: hsla(0,0%,100%,.5);
-    color: #fff;
-    margin: 0;
-    margin-left: 15px;
-}
-.signup-button {
-    border-color: hsla(0,0%,100%,.5);
-    color: #fff;
-    margin: 0;
-    margin-left: 15px;
-    -webkit-transition: opacity .1s ease-out;
-    transition: opacity .1s ease-out;
-}
 .userlink .outlined {
-    background-color: transparent;
-    box-shadow: none;
-    transition: border-color .1s ease-out,background-color .1s ease-out;
-    border-color: hsla(0,0%,100%,.5);
+    border-color: white;
     color: #fff;
     margin: 0;
     margin-left: 15px;
-    -webkit-transition: opacity .1s ease-out;
-    transition: opacity .1s ease-out;
+}
+.userlink .outlined:hover{
+    opacity: 0.7;
 }
 
 .button{
@@ -74,12 +49,48 @@ nav.topnav .button {
     font-size: 13px;
     line-height: 28px;
     padding: 0 15px;
-    background-color: transparent;
     color: #444;
     cursor: pointer;
-    box-shadow: 0 0 0 1px hsla(0,0%,100%,.05), inset 0 0 0 100px rgba(0,0,0,.02);
     border: 1px solid rgba(0,0,0,.15);
     box-sizing: border-box;
     white-space: nowrap;
     user-select: none;
+}
+
+/**********PROFILE************/
+.profile-pix{
+  width: 130px;
+  height: 130px;
+  margin: 80px auto 0px;
+  border-radius: 50%;
+  z-index: 1;
+  position: relative;
+  background-image: url("../img/my-pix.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.profile-main{
+  width: 650px;
+  height: 250px;
+  background: white;
+  margin: -75px auto;
+  position: relative;
+  border-radius: 5px;
+  padding: 100px 20px 20px;
+}
+.profile-name{
+  color: black;
+  width: 400px;
+  height : 10px;
+  margin: 0 auto;
+  text-align: center
+}
+.profile-name:first-child{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.profile-name:last-child{
+    font-size: 15px;
+    color: red;
 }
