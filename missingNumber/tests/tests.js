@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-    require("../app/missing.js");
+   var findMissing = require("../app/missing.js").findMissing;
     
     describe("Find missing number two lists: ", function() {
 
