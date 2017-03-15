@@ -1,0 +1,14 @@
+{
+  "name": "missingnumber",
+  "version": "1.0.0",
+  "description": "Andela exercise",
+  "main": "app/missing.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jasmine tests/tests.js"
+  },
+  "author": "Nnenanya O.K",
+  "license": "ISC"
+}
