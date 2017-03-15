@@ -1,7 +1,4 @@
-module.exports = {
-    
-    Array: new Array()
-}
+module.exports = [].prototype;
 
 Array.prototype.toTwenty = function(){
     var arr20 = [];
@@ -25,4 +22,8 @@ Array.prototype.toForty = function(){
         arr40.push(i);
     }
     return arr40;
+}
+
+Array.prototype.search = function(){
+    
 }
