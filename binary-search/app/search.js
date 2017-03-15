@@ -1,7 +1,4 @@
-module.exports = {
-    
-    Array: new Array()
-}
+module.exports = [].prototype;
 
 Array.prototype.toTwenty = function(){
     var arr20 = [];
@@ -25,4 +22,59 @@ Array.prototype.toForty = function(){
         arr40.push(i);
     }
     return arr40;
+}
+
+Array.prototype.search = function (searchElement) {
+    const self = this;
+    //console.log(self);
+    const first = self[0];
+    const last = self[self.length - 1];
+    self.count = 0;
+    self.index = -1;
+
+    //console.log(self);
+	var start = 0;
+    var end = self.length - 1;
+    var currentIndex;
+    var currentElement;
+    if (searchElement > last || searchElement < first){
+        return new holder (self.count,self.length,self.index);
+    }else{
+        while (start <= end) {
+            currentIndex = Math.floor((start + end) / 2);
+            currentElement = self[currentIndex];
+            if (self[start]  === searchElement) {
+                 self.index = start;
+                  break;
+             }
+             else if (self[end]  === searchElement){
+                 self.index = end;
+                  break;
+             }else if (currentElement < searchElement) {
+                start = currentIndex + 1;
+            }
+            else if (currentElement > searchElement) {
+                end = currentIndex - 1;
+            }
+            else {
+                self.index = currentIndex;
+                break;
+            }
+    	    self.count++;
+        }   
+    }
+    
+
+
+   return new holder (self.count,self.length,self.index);
+  
+};
+
+
+function holder(count,length,index){
+  
+    this.count = count;
+    this.length = length;
+    this.index = index;
+  
 }
