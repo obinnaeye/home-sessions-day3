@@ -25,7 +25,7 @@ This app takes two arrays as parameters and then returns the number is one array
 This app is just a clone of the site https://about.me/nnenanya
 
 It is the profile page of about.me, a site for organizing and sharing your portfolio.
-Here is a sample https://obinnaeye.github.io/home-sessions-day3
+Here is a sample https://obinnaeye.github.io/home-sessions-day3/aboutMeClone/index.html
 
 ### To use this app
     1.  clone the repo
